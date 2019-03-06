@@ -6,6 +6,7 @@ int main()
     object firstProcess;
     initMemoryManager();
     initCommonSymbols();
-	while(vm_execute(globalSymbol("systemProcess"),15000));
+    firstProcess = globalSymbol("systemProcess");
+	while(vm_execute(firstProcess,15000));
     return 0;
 }

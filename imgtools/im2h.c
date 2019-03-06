@@ -13,9 +13,8 @@ void im2h()
     printf("struct objectStruct objectTable[] = {\n");
     for(int i = 0; i < ObjectTableMax; i++)
     {
-        printf("{%d,(short)%d,%d,(object*)%d}",
+        printf("{%d,0,%d,(object*)%d}",
             objectTable[i].class,
-            objectTable[i].referenceCount,
             objectTable[i].size,
             objectTable[i].size == 0?0:objectTable[i].memory - memoryBlock
             );

@@ -89,9 +89,9 @@ noreturn initMemoryManager()
 	currentMemoryPosition = 0;
 
 	/* object at location 0 is the nil object, so give it nonzero ref */
+#endif
 	objectTable[0].referenceCount = 1;
 	objectTable[0].size = 0;
-#endif
 }
 
 /* setFreeLists - initialise the free lists */
@@ -365,6 +365,12 @@ void visit(register object x)
 		}
 	}
 }
+
+void gc()
+{
+
+}
+
 int objectCount()
 {
 	//visit(symbols);
